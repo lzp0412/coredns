@@ -48,7 +48,7 @@ func NewServer(addr string, group []*Config) (*Server, error) {
 	s := &Server{
 		Addr:         addr,
 		zones:        make(map[string]*Config),
-		graceTimeout: 5 * time.Second,
+		graceTimeout: 120 * time.Second,
 	}
 
 	// We have to bound our wg with one increment
